@@ -28,7 +28,7 @@ class StockState(rx.State):
 
                 async with self:
                     self.cantidad_activos = int(cantidad)
-                    self.error_message = ""
+                    self.error_message = "Una semana para sincronizar la parte grafica, el backend y la base de datos..."
 
         except httpx.HTTPStatusError as e:
             await self._handle_error(f"Error HTTP: {e.response.status_code}", e)
