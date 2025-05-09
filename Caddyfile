@@ -11,7 +11,7 @@
     }
 }
 
-:{$PORT} {
+:$PORT {
     # Access logs
     log {
         format json
