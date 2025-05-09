@@ -33,9 +33,9 @@
 	try_files {path} {path}.html
 
 	# the handle_path directive will strip /backend/ from the path before proxying
-	handle /backend/* {
+	handle_path /backend/* {
 		# this strips the /backend/ prefix from the uri sent to the proxy address
-		reverse_proxy https://appstockbackend-production.up.railway.app # proxy all requests for /backend/* to the backend
+		reverse_proxy 127.0.0.1:8000 # proxy all requests for /backend/* to the backend
 	}
 
 	# rewrite any errors to the corresponding error page
