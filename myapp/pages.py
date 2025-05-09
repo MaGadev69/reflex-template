@@ -12,7 +12,7 @@ class State(rx.State):
 
 def index() -> rx.Component:
     return rx.fragment(
-        rx.color_mode_button(rx.color_mode_icon(), float="right"),
+        #rx.color_mode_button(rx.color_mode_icon(), float="right"),
         rx.vstack(
             rx.heading("Welcome to Reflex on Railway!", font_size="2em"),
             rx.box("Get started by editing ", rx.code(filename, font_size="1em")),
@@ -29,7 +29,7 @@ def index() -> rx.Component:
                     )
                 },
             ),
-            spacing="1.5em",
+            spacing="1",
             font_size="2em",
             padding_top="10%",
         ),
@@ -40,10 +40,10 @@ def health() -> rx.Component:
 
 def not_found(page_text) -> rx.Component:
     return rx.fragment(
-        rx.color_mode_button(rx.color_mode_icon(), float="right"),
+        #rx.color_mode_button(rx.color_mode_icon(), float="right"),
         rx.vstack(
             rx.heading(page_text, font_size="2em"),
-            spacing="1.5em",
+            spacing="1",
             padding_top="10%",
         ),
     )
