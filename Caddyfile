@@ -1,17 +1,17 @@
 {
     # Global options
-    admin off                # No need for admin API in Railway
-    persist_config off       # Storage isn't persistent
-    auto_https off           # Railway handles HTTPS
+    admin off
+    persist_config off
+    auto_https off
     log {
-        format json          # Runtime logs in JSON
+        format json
     }
     servers {
-        trusted_proxies static private_ranges # Trust Railway's proxy
+        trusted_proxies static private_ranges
     }
 }
 
-:$PORT {
+{$PORT} {
     # Access logs
     log {
         format json
